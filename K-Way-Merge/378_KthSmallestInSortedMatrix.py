@@ -13,6 +13,8 @@ Explanation: The 5th smallest number in the matrix is 7.
 
 from heapq import *
 
+# O(K*logM) Time where M is total of input arrays
+# O(M) Space
 def find_Kth_smallest(matrix, k):
     min_heap = []
 
