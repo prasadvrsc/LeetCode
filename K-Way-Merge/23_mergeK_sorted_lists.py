@@ -4,7 +4,6 @@ Input: L1=[2, 6, 8], L2=[3, 6, 7], L3=[1, 3, 4]
 Output: [1, 2, 3, 3, 4, 6, 6, 7, 8]
 '''
 
-from __future__ import print_function
 from heapq import *
 
 class ListNode:
