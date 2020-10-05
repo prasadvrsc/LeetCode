@@ -1,0 +1,21 @@
+A recursive function consists of 2 main parts:
+    1. Base Case: The base case is where all further calls to the same function stop, meaning that it does not make any subsequent recursive calls
+    2. Recursive Case: The recursive case is where the function calls itself repeatedly until it reaches the base case
+
+Syntax of Recursive function:
+
+def RecursiveFunction() :
+  # Base Case
+  if <baseCaseCondition> :
+    <return some base case value>
+ 
+  # Recursive Case
+  else :
+    <return(recursive call and any other task)>
+
+
+Recursion and Memory Visualization:
+When a function is called, its memory is allocated on a stack (LIFO). 
+
+
+
