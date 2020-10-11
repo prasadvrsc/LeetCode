@@ -30,11 +30,38 @@ class LinkedList(object):
             current.next = Node(value)
 
 
-    def add_after_value(self, value):
-        pass
+    def add_after_value(self, initial_value, new_node_value):
+        if self.head is None:
+            return self.head
+        else:
+            current_node = self.head
+            while current_node.next is not None:
+                if(current_node.value == initial_value): 
+                    temp = current_node.next
+                    new_node = Node(new_node_value)
+                    current_node.next = new_node
+                    new_node.next = temp
+                    break
+                else:
+                    current_node = current_node.next
+
+
 
     def remove(self, value):
-        pass
+        if self.head is None:
+            return
+        elif self.head.value == value:
+            self.head = self.head.next
+        else:
+            current = self.head
+            while current.next is not None:
+                if (current.next.value == value):
+                    temp = current.next.next
+                    current.next = temp
+                else:
+                    current = current.next
+            
+        
 
     def print_linked_list(self):
         current_node = self.head
@@ -45,7 +72,6 @@ class LinkedList(object):
         while current_node is not None:
             print(current_node.value, end= ' ')
             current_node = current_node.next
-        
 
 
 
@@ -58,8 +84,16 @@ new_linked_list.add_last(2) # 1 -> 2
 new_linked_list.add_last(3) # 1 -> 2 _3
 new_linked_list.print_linked_list()
 new_linked_list.add_first(0) # 1 -> 2 _3
-print('\n')
+new_linked_list.add_after_value(1, 22) # 0 1 22 2 3 
+
+new_linked_list.add_after_value(55, 44)
+new_linked_list.remove(22)
+
+print()
 new_linked_list.print_linked_list()
+
+
+
 
 
     
