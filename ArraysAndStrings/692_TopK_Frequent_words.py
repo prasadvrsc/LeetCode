@@ -14,6 +14,7 @@ class WordCount:
         return self.count < other.count
 
 class Solution(object):
+    #O(nlogk) Time | O(k) space
     def topK_frequent(self, words, k):
         result = []
         word_count = defaultdict(int)
